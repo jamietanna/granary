@@ -46,6 +46,8 @@ class Meetup(source.Source):
         pass
 
     def create(self, obj, include_link=source.OMIT_LINK, ignore_formatting=False):
+        import json
+        print("Attempting to create with " + json.dumps(obj))
         return self._create(obj, False, include_link, ignore_formatting)
 
     def preview_create(self, obj, include_link=source.OMIT_LINK, ignore_formatting=False):
